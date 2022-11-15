@@ -1,0 +1,431 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<meta character="UTF-8" />
+		<title>Resume - Eric Shields</title>
+
+		<style>
+		/* Globals */
+		* {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			text-align: justify;
+		}
+		body {
+			background: #69c;
+			font-family: times, serif;
+			font-size: 14px;
+			line-height: 1.25;
+		}
+		.container {
+			background: #fff;
+			box-shadow: 3px 3px 8px 2px #444;
+			border: 1px solid #000;
+			margin: 20px auto;
+			padding: .5in;
+			width: 8.5in;
+			z-index: 1;
+		}
+		section {
+			display: block;
+			overflow: hidden;
+		}
+		section + section {
+			margin-top: 20px;
+		}
+		ul {
+			margin-left: 30px;
+		}
+		.section_head {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.section_head:after {
+			content: ":";
+		}
+		.left,
+		.mid {
+			float: left;
+		}
+		.right {
+			float: right;
+			width: 185px;
+		}
+
+		/* Primary info */
+		.primary_info .name {
+			border-bottom: 2px solid #000;
+			font-size: 24px;
+			font-variant: small-caps;
+			font-weight: bold;
+			margin-bottom: 2px;
+			width: 100%;
+		}
+		.primary_info .address,
+		.primary_info .phone {
+			font-style: italic;
+		}
+
+		/* Search Details */
+		.search_details table {
+			border-collapse: collapse;
+			border-spacing: 0;
+			margin-left: 25px;
+		}
+		.search_details table th {
+			font-weight: bold;
+			text-align: left;
+			vertical-align: top;
+			width: 115px;
+		}
+		.search_details table td {
+			padding-left: 10px;
+			vertical-align: top;
+		}
+
+		/* Education */
+		.education .section_head {
+			float: left;
+			margin-right: 15px;
+		}
+		.education .mid {
+			margin-top: 3px;
+		}
+		.education .right {
+			margin-top: 3px;
+		}
+		.education .school,
+		.education .date,
+		.education .location {
+			font-variant: small-caps;
+		}
+		.education .degree {
+			font-weight: bold;
+		}
+
+		/* Employment History */
+		.employment .job_entry {
+			margin-left: 25px;
+		}
+		.employment .job_entry + .job_entry {
+			margin-top: 20px;
+		}
+		.employment .summary {
+			margin-bottom: 7px;
+			overflow: hidden;
+		}
+		.employment .job_title {
+			font-variant: small-caps;
+		}
+		.employment .company,
+		.employment .location {
+			font-style: italic;
+		}
+		.employment .standalone {
+			margin-left: 15px;
+		}
+
+		/* Personal Projects */
+		.projects .project {
+			margin-left: 25px;
+		}
+		.projects .project + .project {
+			margin-top: 20px;
+		}
+		.projects .project .project_head {
+			font-variant: small-caps;
+		}
+		.projects .project .project_desc {
+			margin-left: 25px;
+		}
+
+		/* Skills */
+
+		/* Honors */
+
+		/* Final word */
+		.final p {
+			font-variant: small-caps;
+			font-weight: bold;
+		}
+		
+		/* Old IE dialog */
+		.old_ie {
+			background: #fff;
+			border: 1px solid #000;
+			height: 100px;
+			left: 50%;
+			margin-left: -125px;
+			padding: 15px;
+			position: absolute;
+			top: 300px;
+			width: 250px;
+			z-index: 999;
+		}
+		.old_ie_overlay {
+			background: #000;
+			height: 1000px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 998;
+		}
+		
+		/* Print styles */
+		@media print {
+			body {
+				background: none;
+			}
+			a {
+				color: #000;
+			}
+			.container {
+				border: none;
+				box-shadow: none;
+				padding: 0;
+			}
+		}
+		</style>
+
+		<!-- Add HTML5 compatability in IE < 9 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script type="text/javascript">
+				// Check if the source failed to pull, such as because we're not online, and use the really simple version
+				if (!window.html5) {
+					document.createElement('section');
+				}
+			</script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!-- Check for even older IE -->
+		<!--[if lte IE 7]>
+			<div class="old_ie_overlay">&nbsp;</div>
+			<div class="old_ie">It has been detected that you are running IE7 or older. Your browser does not support enough CSS standards to properly render this document.  Please instead view the <a href="resume.pdf">PDF file</a>.  Thank you.</div>
+		<![endif]-->
+
+		<div class="container">
+			<section class="primary_info">
+				<p class="name">Eric Shields</p>
+				<p class="address">3800 Teachers Ln Apt 3, Buffalo, NY 14127</p>
+				<p class="phone">Mobile Phone: (607)221-5725</p>
+				<p class="email">Email: <a href="mailto:shiermail-jobs@yahoo.com">shiermail-jobs@yahoo.com</a></p>
+			</section>
+
+			<section class="search_details">
+				<p class="section_head">Job Search Details</p>
+				<table>
+					<tr>
+						<th scope="row">Objective:</td>
+						<td>To create and maintain cutting edge front end web applications using Javascript, HTML, and CSS</td>
+					</tr>
+					<tr>
+						<th scope="row">Availability:</td>
+						<td>Currently employed.  Availability based on offer.</td>
+					</tr>
+					<tr>
+						<th scope="row">Desired Salary:</td>
+						<td>60k/year, plus benefits</td>
+					</tr>
+					<tr>
+						<th scope="row">Citizenship:</td>
+						<td><b>US Citizen</b></td>
+					</tr>
+					<tr>
+						<th scope="row">Desired Job Titles:</td>
+						<td>Web Developer – Front End</td>
+					</tr>
+					<tr>
+						<th scope="row">Job Details:</td>
+						<td>2<sup>nd</sup> shift preferred, any acceptable, Willing to work <b>Extra Hours</b> as important projects demand, <b>Willing to Relocate</b></td>
+					</tr>
+					<tr>
+						<th scope="row">Work Experience:</td>
+						<td><em>5 Years Web Development related Experience</em></td>
+					</tr>
+				</table>
+			</section>
+
+			<section class="education">
+				<p class="section_head">Education</p>
+				<div class="mid">
+					<p class="school">Rochester Institute of Technology</p>
+					<p class="degree">Bachelor of Science in Computer Engineering</p>
+				</div>
+				<div class="right">
+					<p class="date">Graduated: March 7, 2007</p>
+					<p class="location">Rochester, NY</p>
+				</div>
+			</section>
+
+			<section class="employment">
+				<p class="section_head">Employment History</p>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">GUI Developer</p>
+							<p class="company">Synacor, Inc.</p>
+						</div>
+						<div class="right">
+							<p class="date">May 2009 - Present</p>
+							<p class="location">Buffalo, NY</p>
+						</div>
+					</div>
+					<p class="standalone">This job had three phases:</p>
+					<ul>
+						<li><span>Client Deployment Engineer – Client Deployment team (October 2011 – Present)</span>
+							<ul>
+								<li>Work with internal client managers to handle client requests and product deployments to the over 30 ISPs Synacor serves</li>
+								<li>Requires less techincal skill than the previous two phases, but much more communication and knowledge of the company’s systems and the Portal codebase</li>
+							</ul>
+						</li>
+						<li><span>Front End Javascript Developer – TV/Video team (November 2010 – October 2011)</span>
+							<ul>
+								<li>Worked very closely with the other two primary members of the TV Front End team to update the Video channel to Primetime v1.0, Primetime v2.0, and Primetime v2.2 (Charter Video On Demand)</li>
+								<li>Improved Javascript coding skills extensively</li>
+								<li>Wrote close to 75% of the new JS code for Primetime 2.0 and 95% of the HTML/CSS</li>
+								<li>Primetime 1.0 utilized the Pure templating system integrated into the existing portal architecture</li>
+								<li>Primetime 2.0 was a ground-up rewrite of the video channel, covering 95% of the codebase (excluding the TV listings grid and flash player wrapper)</li>
+								<li>Primetime 2.0 utilized the Mustache/ctemplate templating system, extensive jQuery, as well as jQuery UI</li>
+								<li>Work was performed in Sprints according to a slightly modified Agile development process</li>
+								<li>This video channel can be seen on many major ISPs, such as <a target="_blank" href="http://www.charter.net/tv/3/landing/">Charter</a>, and it currently available to over 10 million users</li>
+								<li>All code had to function the same in IE7-9, FF3.6, FF, Chrome, and Safari</li>
+							</ul>
+						</li>
+						<li><span>Cut-up Artist – Ux team (May 2009 – November 2010)</span>
+							<ul>
+								<li>Took Photoshop documents and requirement specs created by the Design team and crafted HTML/CSS webpages out of them</li>
+								<li>Completed cut-ups were passed off to development teams to integrate into the existing portal</li>
+								<li>Worked closely with design and developers to ensure as smooth an integration as possible</li>
+								<li>Worked on numerous important projects, such as a prototype for the portal we would be crafting for one of the largest ISPs in Europe.  We landed the client.</li>
+								<li>Cut-ups had to function in IE6 and look the same in IE7-8, FF, Chrome</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Application Developer Associate Professional</p>
+							<p class="company">CSC Technology Management Group and  BAE Systems IT</p>
+						</div>
+						<div class="right">
+							<p class="date">November 2006 – October 2008</p>
+							<p class="location">Binghamton, NY</p>
+						</div>
+					</div>
+					<ul>
+						<li><span>Created custom solutions for clients internal to BAE Systems</span>
+							<ul>
+								<li>Used SQL, PL/SQL, APEX for Oracle, and Javascript to create data-driven webpages</li>
+								<li>Created a custom Javascript library which allowed easy creation of custom popup dialogs far more powerful than the built-in APEX pop-ups.  This was a personal project beyond what was asked.</li>
+								<li>Began position with no knowledge of SQL, PL/SQL, or any Oracle product</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Software Engineer:  Summer Internship Program</p>
+							<p class="company">Honeywell Aerospace</p>
+						</div>
+						<div class="right">
+							<p class="date">June 2006 – August 2006</p>
+							<p class="location">Phoenix, AZ</p>
+						</div>
+					</div>
+					<ul>
+						<li><span>Created an Intranet website to allow the search and retrieval of engine vibration test data by employees</span>
+							<ul>
+								<li>Written in PHP, JavaScript, and XHTML/CSS;  uses the Fusebox framework</li>
+								<li>Involved many new concepts, including PHP login sessions and PHP file I/O</li>
+								<li>Completed in 1 ½ months, from initial concept to live release</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="job_entry">
+					<div class="summary">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Software Engineer:  Summer Internship Program</p>
+							<p class="company">Honeywell Aerospace</p>
+						</div>
+						<div class="right">
+							<p class="date">June 2005 – August 2005</p>
+							<p class="location">Phoenix, AZ</p>
+						</div>
+						<p class="company">Honeywell Aerospace</p>
+					</div>
+					<ul>
+						<li>Design a program in PHP to convert very old file format to a newly developed one</li>
+						<li>As this was my first work experience, it required extremely fast adaptation.  Learned basics of  PHP and Regular Expressions in less than 5 days each</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="projects">
+				<p class="section_head">Personal Projects</p>
+				<div class="project">
+					<p class="project_head">Personal Website (Ongoing)</p>
+					<p class="project_desc">After Website Design and Implementation in college, it seemed appropriate to have a personal website.  While the site itself never really developed a purpose, it has served as a portfolio (<a target="_blank" href="http://www.coldcandor.com/webpages.php">http://www.coldcandor.com/webpages.php</a>), and a testbed for ideas and functional practice.  The site is now hosted on a server located in the living room, with all steps to create a web server (VirtualBox, Ubutnu Server, Apache, networking, MySQL, Git, etc) having been completed personally.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Minecraft Enchanting Simulator (2012)</p>
+					<p class="project_desc">A project to both analyze and understand the Minecraft enchanting algorithm, and to utilize Javascript coding concepts learned at Synacor.  It makes heavy use of jQuery and will, once updated, use mote.js (a version of the Mustache templating language) for dyamic HTML templates.  Having not had time to finish it fully, it lacks a pretty UI and input validation.  The simulator is hosted at <a target="_blank" href="http://beta.coldcandor.com/minecraft.php">http://beta.coldcandor.com/minecraft.php</a>.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Guild Website (2007)</p>
+					<p class="project_desc">The largest project outside of the hosting and creation of the personal website, this was a self-motivated project to create a highly functional website for a World of Warcraft guild.  Written in PHP, XHTML, CSS, and JavaScript, the site caters to the many needs of a guild, including an interactive calendar, a screenshot uploader and viewer, a registration and login system, and many other features.  A MySQL database is used to maintain many features of the site.  The website is located at <a target="_blank" href="http://freedomschoice.coldcandor.com">http://freedomschoice.coldcandor.com</a>.  The website is as it was in 2007, except that the announcements and logins were wiped.  You may login using eshields/12345 if you wish.  The site took approximately 3 months from inception to current.</p>
+				</div>
+			</section>
+
+			<section class="skills">
+				<p class="section_head">Skills</p>
+				<ul>
+					<li><span>Programming Languages</span>
+						<ul>
+							<li>Extensive knowledge in Javscript, HTML/CSS, mustache/ctemplate</li>
+							<li>Knowledge in HTML5/CSS3, PHP, Regular Expressions, XML, Pure, Bash Scripting, SQL</li>
+						</ul>
+					</li>
+					<li><span>Applications</span>
+						<ul>
+							<li>Git version control, jEdit editor, MS Word, MS Excel, MS Visio, Toggl, AtTask, Adobe Photoshop (as it pertains to cut-ups)</li>
+						</ul>
+					</li>
+					<li><span>Operating Systems</span>
+						<ul>
+							<li>Windows XP, Windows 7, Linux/Unix command line, Mac OSX</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section class="honors">
+				<p class="section_head">Honors and Activities</p>
+				<ul>
+					<li>RIT Presidential Scholarship</li>
+					<li>TAP award for excellence in academics</li>
+					<li>Member of People to People International Student Ambassador Program since 2000</li>
+					<li><em>Community Service Head</em> of the House of General Science, 2002-2004</li>
+					<li>Varsity Track and Field (Indoor and Outdoor), 2003-2006</li>
+					<li>Member of the IEEE Society through 2007</li>
+					<li>Avid Runner and Nature Enthusist</li>
+				</ul>
+			</section>
+
+			<section class="final">
+				<p>References, college transcript, letter of recommendation, and code samples available on request</p>
+			</section>
+		</div>
+	</body>
+</html>

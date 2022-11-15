@@ -1,0 +1,902 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Resume - Eric Shields</title>
+
+		<style>
+		/* Globals */
+		* {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #69c;
+			font-family: Arial, sans-serif;
+			font-size: 13px;
+			line-height: 1.35;
+		}
+		.container {
+			background: #fff;
+			box-shadow: 3px 3px 8px 2px #444;
+			border: 1px solid #000;
+			margin: 20px auto;
+			padding: .5in;
+			text-align: justify;
+			width: 8.5in;
+		}
+		section {
+			display: block;
+			overflow: hidden;
+		}
+		section + section {
+			margin-top: 17px;
+		}
+		a {
+			color: #00f;
+		}
+		ul {
+			margin-left: 30px;
+		}
+		.section_head {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.section_head:after {
+			content: ":";
+		}
+		.left,
+		.mid {
+			float: left;
+		}
+		.right {
+			float: right;
+			text-align: right;
+		}
+
+		/* Primary info */
+		.primary_info .name {
+			border-bottom: 2px solid #000;
+			font-size: 24px;
+			font-variant: small-caps;
+			font-weight: bold;
+			margin-bottom: 2px;
+			width: 100%;
+		}
+		.primary_info .address,
+		.primary_info .phone {
+			font-style: italic;
+		}
+
+		/* Search Details */
+		.search_details table {
+			border-collapse: collapse;
+			border-spacing: 0;
+			margin-left: 25px;
+		}
+		.search_details table th {
+			font-weight: bold;
+			text-align: left;
+			vertical-align: top;
+			width: 115px;
+		}
+		.search_details table td {
+			padding-left: 10px;
+			vertical-align: top;
+		}
+
+		/* Education */
+		.education .section_head {
+			float: left;
+			margin-right: 15px;
+		}
+		.education .mid {
+			margin-top: 3px;
+		}
+		.education .right {
+			margin-top: 3px;
+		}
+		.education .school,
+		.education .date,
+		.education .location {
+			font-variant: small-caps;
+		}
+		.education .degree {
+			font-weight: bold;
+		}
+
+		/* Employment History */
+		.employment .job_entry {
+			margin-left: 25px;
+		}
+		.employment .job_entry + .job_entry {
+			margin-top: 17px;
+		}
+		.employment .summary {
+			margin-bottom: 7px;
+			overflow: hidden;
+			text-align: left;
+		}
+		.employment .job_title {
+			font-variant: small-caps;
+		}
+		.employment .company,
+		.employment .location {
+			font-style: italic;
+		}
+		.employment .standalone {
+			margin-left: 15px;
+		}
+
+		/* Personal Projects */
+		.projects .project {
+			margin-left: 25px;
+		}
+		.projects .project + .project {
+			margin-top: 17px;
+		}
+		.projects .project .project_head {
+			font-variant: small-caps;
+		}
+		.projects .project .project_desc {
+			margin-left: 25px;
+		}
+
+		/* Skills */
+
+		/* Honors */
+
+		/* Final word */
+		.final p {
+			font-variant: small-caps;
+			font-weight: bold;
+		}
+
+		/* Print styles */
+		@media print {
+			body {
+				background: none;
+			}
+			a {
+				color: #000;
+			}
+			.container {
+				border: none;
+				box-shadow: none;
+				margin: 0;
+				padding: 0;
+				width: auto;
+			}
+			.old_ie {
+				display: none;
+				height: 0;
+				visibility: hidden;
+			}
+		}
+		</style>
+	</head>
+	<body>
+
+		<!-- Check for old IE and shiv it -->
+		<!--[if lte IE 8]>
+			<script>
+				/**
+				* @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+				*/
+				;(function(window, document) {
+				/*jshint evil:true */
+				  /** version */
+				  var version = '3.7.3';
+
+				  /** Preset options */
+				  var options = window.html5 || {};
+
+				  /** Used to skip problem elements */
+				  var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
+
+				  /** Not all elements can be cloned in IE **/
+				  var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
+
+				  /** Detect whether the browser supports default html5 styles */
+				  var supportsHtml5Styles;
+
+				  /** Name of the expando, to work with multiple documents or to re-shiv one document */
+				  var expando = '_html5shiv';
+
+				  /** The id for the the documents expando */
+				  var expanID = 0;
+
+				  /** Cached data for each document */
+				  var expandoData = {};
+
+				  /** Detect whether the browser supports unknown elements */
+				  var supportsUnknownElements;
+
+				  (function() {
+					try {
+						var a = document.createElement('a');
+						a.innerHTML = '<xyz></xyz>';
+						//if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
+						supportsHtml5Styles = ('hidden' in a);
+
+						supportsUnknownElements = a.childNodes.length == 1 || (function() {
+						  // assign a false positive if unable to shiv
+						  (document.createElement)('a');
+						  var frag = document.createDocumentFragment();
+						  return (
+							typeof frag.cloneNode == 'undefined' ||
+							typeof frag.createDocumentFragment == 'undefined' ||
+							typeof frag.createElement == 'undefined'
+						  );
+						}());
+					} catch(e) {
+					  // assign a false positive if detection fails => unable to shiv
+					  supportsHtml5Styles = true;
+					  supportsUnknownElements = true;
+					}
+
+				  }());
+
+				  /**
+				   * Creates a style sheet with the given CSS text and adds it to the document.
+				   * @private
+				   * @param {Document} ownerDocument The document.
+				   * @param {String} cssText The CSS text.
+				   * @returns {StyleSheet} The style element.
+				   */
+				  function addStyleSheet(ownerDocument, cssText) {
+					var p = ownerDocument.createElement('p'),
+						parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
+
+					p.innerHTML = 'x<style>' + cssText + '</style>';
+					return parent.insertBefore(p.lastChild, parent.firstChild);
+				  }
+
+				  /**
+				   * Returns the value of `html5.elements` as an array.
+				   * @private
+				   * @returns {Array} An array of shived element node names.
+				   */
+				  function getElements() {
+					var elements = html5.elements;
+					return typeof elements == 'string' ? elements.split(' ') : elements;
+				  }
+
+				  /**
+				   * Extends the built-in list of html5 elements
+				   * @memberOf html5
+				   * @param {String|Array} newElements whitespace separated list or array of new element names to shiv
+				   * @param {Document} ownerDocument The context document.
+				   */
+				  function addElements(newElements, ownerDocument) {
+					var elements = html5.elements;
+					if(typeof elements != 'string'){
+					  elements = elements.join(' ');
+					}
+					if(typeof newElements != 'string'){
+					  newElements = newElements.join(' ');
+					}
+					html5.elements = elements +' '+ newElements;
+					shivDocument(ownerDocument);
+				  }
+
+					/**
+				   * Returns the data associated to the given document
+				   * @private
+				   * @param {Document} ownerDocument The document.
+				   * @returns {Object} An object of data.
+				   */
+				  function getExpandoData(ownerDocument) {
+					var data = expandoData[ownerDocument[expando]];
+					if (!data) {
+						data = {};
+						expanID++;
+						ownerDocument[expando] = expanID;
+						expandoData[expanID] = data;
+					}
+					return data;
+				  }
+
+				  /**
+				   * returns a shived element for the given nodeName and document
+				   * @memberOf html5
+				   * @param {String} nodeName name of the element
+				   * @param {Document} ownerDocument The context document.
+				   * @returns {Object} The shived element.
+				   */
+				  function createElement(nodeName, ownerDocument, data){
+					if (!ownerDocument) {
+						ownerDocument = document;
+					}
+					if(supportsUnknownElements){
+						return ownerDocument.createElement(nodeName);
+					}
+					if (!data) {
+						data = getExpandoData(ownerDocument);
+					}
+					var node;
+
+					if (data.cache[nodeName]) {
+						node = data.cache[nodeName].cloneNode();
+					} else if (saveClones.test(nodeName)) {
+						node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
+					} else {
+						node = data.createElem(nodeName);
+					}
+
+					// Avoid adding some elements to fragments in IE < 9 because
+					// * Attributes like `name` or `type` cannot be set/changed once an element
+					//   is inserted into a document/fragment
+					// * Link elements with `src` attributes that are inaccessible, as with
+					//   a 403 response, will cause the tab/window to crash
+					// * Script elements appended to fragments will execute when their `src`
+					//   or `text` property is set
+					return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
+				  }
+
+				  /**
+				   * returns a shived DocumentFragment for the given document
+				   * @memberOf html5
+				   * @param {Document} ownerDocument The context document.
+				   * @returns {Object} The shived DocumentFragment.
+				   */
+				  function createDocumentFragment(ownerDocument, data){
+					if (!ownerDocument) {
+						ownerDocument = document;
+					}
+					if(supportsUnknownElements){
+						return ownerDocument.createDocumentFragment();
+					}
+					data = data || getExpandoData(ownerDocument);
+					var clone = data.frag.cloneNode(),
+						i = 0,
+						elems = getElements(),
+						l = elems.length;
+					for(;i<l;i++){
+						clone.createElement(elems[i]);
+					}
+					return clone;
+				  }
+
+				  /**
+				   * Shivs the `createElement` and `createDocumentFragment` methods of the document.
+				   * @private
+				   * @param {Document|DocumentFragment} ownerDocument The document.
+				   * @param {Object} data of the document.
+				   */
+				  function shivMethods(ownerDocument, data) {
+					if (!data.cache) {
+						data.cache = {};
+						data.createElem = ownerDocument.createElement;
+						data.createFrag = ownerDocument.createDocumentFragment;
+						data.frag = data.createFrag();
+					}
+
+
+					ownerDocument.createElement = function(nodeName) {
+					  //abort shiv
+					  if (!html5.shivMethods) {
+						  return data.createElem(nodeName);
+					  }
+					  return createElement(nodeName, ownerDocument, data);
+					};
+
+					ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
+					  'var n=f.cloneNode(),c=n.createElement;' +
+					  'h.shivMethods&&(' +
+						// unroll the `createElement` calls
+						getElements().join().replace(/[\w\-:]+/g, function(nodeName) {
+						  data.createElem(nodeName);
+						  data.frag.createElement(nodeName);
+						  return 'c("' + nodeName + '")';
+						}) +
+					  ');return n}'
+					)(html5, data.frag);
+				  }
+
+				  /**
+				   * Shivs the given document.
+				   * @memberOf html5
+				   * @param {Document} ownerDocument The document to shiv.
+				   * @returns {Document} The shived document.
+				   */
+				  function shivDocument(ownerDocument) {
+					if (!ownerDocument) {
+						ownerDocument = document;
+					}
+					var data = getExpandoData(ownerDocument);
+
+					if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
+					  data.hasCSS = !!addStyleSheet(ownerDocument,
+						// corrects block display not defined in IE6/7/8/9
+						'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
+						// adds styling not present in IE6/7/8/9
+						'mark{background:#FF0;color:#000}' +
+						// hides non-rendered elements
+						'template{display:none}'
+					  );
+					}
+					if (!supportsUnknownElements) {
+					  shivMethods(ownerDocument, data);
+					}
+					return ownerDocument;
+				  }
+
+				  /**
+				   * The `html5` object is exposed so that more elements can be shived and
+				   * existing shiving can be detected on iframes.
+				   * @type Object
+				   * @example
+				   *
+				   * // options can be changed before the script is included
+				   * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+				   */
+				  var html5 = {
+
+					/**
+					 * An array or space separated string of node names of the elements to shiv.
+					 * @memberOf html5
+					 * @type Array|String
+					 */
+					'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video',
+
+					/**
+					 * current version of html5shiv
+					 */
+					'version': version,
+
+					/**
+					 * A flag to indicate that the HTML5 style sheet should be inserted.
+					 * @memberOf html5
+					 * @type Boolean
+					 */
+					'shivCSS': (options.shivCSS !== false),
+
+					/**
+					 * Is equal to true if a browser supports creating unknown/HTML5 elements
+					 * @memberOf html5
+					 * @type boolean
+					 */
+					'supportsUnknownElements': supportsUnknownElements,
+
+					/**
+					 * A flag to indicate that the document's `createElement` and `createDocumentFragment`
+					 * methods should be overwritten.
+					 * @memberOf html5
+					 * @type Boolean
+					 */
+					'shivMethods': (options.shivMethods !== false),
+
+					/**
+					 * A string to describe the type of `html5` object ("default" or "default print").
+					 * @memberOf html5
+					 * @type String
+					 */
+					'type': 'default',
+
+					// shivs the document according to the specified `html5` object options
+					'shivDocument': shivDocument,
+
+					//creates a shived element
+					createElement: createElement,
+
+					//creates a shived documentFragment
+					createDocumentFragment: createDocumentFragment,
+
+					//extends list of elements
+					addElements: addElements
+				  };
+
+				  // expose html5
+				  window.html5 = html5;
+
+				  // shiv the document
+				  shivDocument(document);
+
+				  /** Used to filter media types */
+				  var reMedia = /^$|\b(?:all|print)\b/;
+
+				  /** Used to namespace printable elements */
+				  var shivNamespace = 'html5shiv';
+
+				  /** Detect whether the browser supports shivable style sheets */
+				  var supportsShivableSheets = !supportsUnknownElements && (function() {
+					// assign a false negative if unable to shiv
+					var docEl = document.documentElement;
+					return !(
+					  typeof document.namespaces == 'undefined' ||
+					  typeof document.parentWindow == 'undefined' ||
+					  typeof docEl.applyElement == 'undefined' ||
+					  typeof docEl.removeNode == 'undefined' ||
+					  typeof window.attachEvent == 'undefined'
+					);
+				  }());
+
+				  /**
+				   * Wraps all HTML5 elements in the given document with printable elements.
+				   * (eg. the "header" element is wrapped with the "html5shiv:header" element)
+				   * @private
+				   * @param {Document} ownerDocument The document.
+				   * @returns {Array} An array wrappers added.
+				   */
+				  function addWrappers(ownerDocument) {
+					var node,
+						nodes = ownerDocument.getElementsByTagName('*'),
+						index = nodes.length,
+						reElements = RegExp('^(?:' + getElements().join('|') + ')$', 'i'),
+						result = [];
+
+					while (index--) {
+					  node = nodes[index];
+					  if (reElements.test(node.nodeName)) {
+						result.push(node.applyElement(createWrapper(node)));
+					  }
+					}
+					return result;
+				  }
+
+				  /**
+				   * Creates a printable wrapper for the given element.
+				   * @private
+				   * @param {Element} element The element.
+				   * @returns {Element} The wrapper.
+				   */
+				  function createWrapper(element) {
+					var node,
+						nodes = element.attributes,
+						index = nodes.length,
+						wrapper = element.ownerDocument.createElement(shivNamespace + ':' + element.nodeName);
+
+					// copy element attributes to the wrapper
+					while (index--) {
+					  node = nodes[index];
+					  node.specified && wrapper.setAttribute(node.nodeName, node.nodeValue);
+					}
+					// copy element styles to the wrapper
+					wrapper.style.cssText = element.style.cssText;
+					return wrapper;
+				  }
+
+				  /**
+				   * Shivs the given CSS text.
+				   * (eg. header{} becomes html5shiv\:header{})
+				   * @private
+				   * @param {String} cssText The CSS text to shiv.
+				   * @returns {String} The shived CSS text.
+				   */
+				  function shivCssText(cssText) {
+					var pair,
+						parts = cssText.split('{'),
+						index = parts.length,
+						reElements = RegExp('(^|[\\s,>+~])(' + getElements().join('|') + ')(?=[[\\s,>+~#.:]|$)', 'gi'),
+						replacement = '$1' + shivNamespace + '\\:$2';
+
+					while (index--) {
+					  pair = parts[index] = parts[index].split('}');
+					  pair[pair.length - 1] = pair[pair.length - 1].replace(reElements, replacement);
+					  parts[index] = pair.join('}');
+					}
+					return parts.join('{');
+				  }
+
+				  /**
+				   * Removes the given wrappers, leaving the original elements.
+				   * @private
+				   * @params {Array} wrappers An array of printable wrappers.
+				   */
+				  function removeWrappers(wrappers) {
+					var index = wrappers.length;
+					while (index--) {
+					  wrappers[index].removeNode();
+					}
+				  }
+
+				  /**
+				   * Shivs the given document for print.
+				   * @memberOf html5
+				   * @param {Document} ownerDocument The document to shiv.
+				   * @returns {Document} The shived document.
+				   */
+				  function shivPrint(ownerDocument) {
+					var shivedSheet,
+						wrappers,
+						data = getExpandoData(ownerDocument),
+						namespaces = ownerDocument.namespaces,
+						ownerWindow = ownerDocument.parentWindow;
+
+					if (!supportsShivableSheets || ownerDocument.printShived) {
+					  return ownerDocument;
+					}
+					if (typeof namespaces[shivNamespace] == 'undefined') {
+					  namespaces.add(shivNamespace);
+					}
+
+					function removeSheet() {
+					  clearTimeout(data._removeSheetTimer);
+					  if (shivedSheet) {
+						  shivedSheet.removeNode(true);
+					  }
+					  shivedSheet= null;
+					}
+
+					ownerWindow.attachEvent('onbeforeprint', function() {
+
+					  removeSheet();
+
+					  var imports,
+						  length,
+						  sheet,
+						  collection = ownerDocument.styleSheets,
+						  cssText = [],
+						  index = collection.length,
+						  sheets = Array(index);
+
+					  // convert styleSheets collection to an array
+					  while (index--) {
+						sheets[index] = collection[index];
+					  }
+					  // concat all style sheet CSS text
+					  while ((sheet = sheets.pop())) {
+						// IE does not enforce a same origin policy for external style sheets...
+						// but has trouble with some dynamically created stylesheets
+						if (!sheet.disabled && reMedia.test(sheet.media)) {
+
+						  try {
+							imports = sheet.imports;
+							length = imports.length;
+						  } catch(er){
+							length = 0;
+						  }
+
+						  for (index = 0; index < length; index++) {
+							sheets.push(imports[index]);
+						  }
+
+						  try {
+							cssText.push(sheet.cssText);
+						  } catch(er){}
+						}
+					  }
+
+					  // wrap all HTML5 elements with printable elements and add the shived style sheet
+					  cssText = shivCssText(cssText.reverse().join(''));
+					  wrappers = addWrappers(ownerDocument);
+					  shivedSheet = addStyleSheet(ownerDocument, cssText);
+
+					});
+
+					ownerWindow.attachEvent('onafterprint', function() {
+					  // remove wrappers, leaving the original elements, and remove the shived style sheet
+					  removeWrappers(wrappers);
+					  clearTimeout(data._removeSheetTimer);
+					  data._removeSheetTimer = setTimeout(removeSheet, 500);
+					});
+
+					ownerDocument.printShived = true;
+					return ownerDocument;
+				  }
+
+				  // expose API
+				  html5.type += ' print';
+				  html5.shivPrint = shivPrint;
+
+				  // shiv for print
+				  shivPrint(document);
+
+				  if(typeof module == 'object' && module.exports){
+					module.exports = html5;
+				  }
+
+				}(typeof window !== "undefined" ? window : this, document));
+			</script>
+
+			<p class="container old_ie">
+				It has been detected that you are using an old version of Internet Explorer.  I have done my best to ensure this document looks and feels like it would in a modern browser, but you may be better served by viewing the PDF file packaged with this.  Click <a href="Resume%20-%20Eric%20Shields.pdf">here</a> to attempt to load it automatically.  If that does not work, please manually select it from the Zip file.  Thank you!
+			</p>
+		<![endif]-->
+
+		<div class="container">
+			<section class="primary_info">
+				<p class="name">Eric Shields</p>
+				<p class="address left">28 Glidden St<br /> Cheektowaga, NY 14206</p>
+				<div class="right">
+					<p class="phone">Mobile Phone: (607)221-5725</p>
+					<p class="email">Email: <a href="mailto:cold_candor@yahoo.com">cold_candor@yahoo.com</a></p>
+				</div>
+			</section>
+
+			<section class="search_details">
+				<p class="section_head">Job Search Details</p>
+				<table>
+					<tr>
+						<th scope="row">Objective:</th>
+						<td>To create and maintain cutting edge front end web applications using HTML5, CSS3, and JavaScript</td>
+					</tr>
+					<tr>
+						<th scope="row">Availability:</th>
+						<td>September 2015</td>
+					</tr>
+					<tr>
+						<th scope="row">Desired Salary:</th>
+						<td>Depends on position and cost of living at job location</td>
+					</tr>
+					<tr>
+						<th scope="row">Citizenship:</th>
+						<td><b>US Citizen</b></td>
+					</tr>
+					<tr>
+						<th scope="row">Desired Job Title:</th>
+						<td>Web Developer &ndash; Front End</td>
+					</tr>
+					<tr>
+						<th scope="row">Work Experience:</th>
+						<td><em>6 Years Web Development related Experience</em></td>
+					</tr>
+				</table>
+			</section>
+
+			<section class="education">
+				<p class="section_head">Education</p>
+				<div class="mid">
+					<p class="school">Rochester Institute of Technology</p>
+					<p class="degree">Bachelor of Science in Computer Engineering</p>
+				</div>
+				<div class="right">
+					<p class="date">Graduated: March 7, 2007</p>
+					<p class="location">Rochester, NY</p>
+				</div>
+			</section>
+
+			<section class="employment">
+				<p class="section_head">Employment History</p>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Front End Engineer - Subcontractor</p>
+							<p class="company">Azereon</p>
+						</div>
+						<div class="right">
+							<p class="date">October 2014 - Present</p>
+							<p class="location">Buffalo, NY</p>
+						</div>
+					</div>
+					<ul>
+						<li>Similar to Freelance work, except Azereon handled the client interactions</li>
+						<li>2-person dev team working closely together on varied website projects, big and small</li>
+						<li>Utilized popular frameworks, such as Symfony, Bootstrap, Less, WordPress, and Magento</li>
+						<li>Used Grunt, Composer, and Node.js for dependancy and library management, as well as Less compilation</li>
+						<li>Had free reign over Front End technology, so long as it worked in all major browers (including mobile)</li>
+						<li>All sites built mobile responsive, usually using Bootstrap</li>
+					</ul>
+				</div>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Varied Job Titles</p>
+							<p class="company">Synacor, Inc.</p>
+						</div>
+						<div class="right">
+							<p class="date">May 2009 - September 2014</p>
+							<p class="location">Buffalo, NY</p>
+						</div>
+					</div>
+					<p class="standalone">This job had three phases:</p>
+					<ul>
+						<li><span>Client Deployment Engineer &ndash; Client Engineering team (October 2011 &ndash; September 2014)</span>
+							<ul>
+								<li>Work with internal client managers to handle client requests and product deployments to the over 45 major Internet Service Providers (ISPs) Synacor serves</li>
+								<li>Required extensive communication and knowledge of the company's systems and the Portal codebase</li>
+								<li>Create and maintain the RDP (Rapid Deployment Portal) template, responsible for quickly and easily creating new portals for small ISP's</li>
+								<li>Explore new technologies as possibilities for internal process and workflow, including Behat, Stash, Composer, and Grunt</li>
+							</ul>
+						</li>
+						<li><span>Front End JavaScript Developer &ndash; TV/Video team (November 2010 &ndash; October 2011)</span>
+							<ul>
+								<li>Worked very closely with the other two primary members of the TV Front End team to update the Video channel to Primetime v1.0, Primetime v2.0, and part of Primetime v2.2 (Charter Video On Demand)</li>
+								<li>Wrote close to 75% of the new JS code for Primetime 2.0 and 95% of the HTML/CSS</li>
+								<li>Primetime 2.0 was a ground-up rewrite of the video channel, covering 95% of the codebase</li>
+								<li>Primetime 2.0 utilized the Mustache/Ctemplate templating system, extensive jQuery, and jQuery UI</li>
+								<li>Work was performed in Sprints according to a slightly modified Agile development process</li>
+								<li>Required extended browser support, including IE7-9, Firefox3.6, and the latest Firefox, Chrome, and Safari</li>
+							</ul>
+						</li>
+						<li style="page-break-before: always;"><span>Cut-up Artist &ndash; Ux team (May 2009 &ndash; November 2010)</span>
+							<ul>
+								<li>Crafted HTML/CSS webpages from Photoshop documents and requirement spec</li>
+								<li>The completed cut-ups were passed off to development teams to integrate into the existing portal</li>
+								<li>Worked closely with design and developers to ensure as smooth an integration as possible</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="job_entry">
+					<div class="summary">
+						<div class="left">
+							<p class="job_title">Application Developer Associate Professional</p>
+							<p class="company">CSC Technology Management Group and BAE Systems IT</p>
+						</div>
+						<div class="right">
+							<p class="date">November 2006 &ndash; October 2008</p>
+							<p class="location">Binghamton, NY</p>
+						</div>
+					</div>
+					<ul>
+						<li><span>Created custom solutions for clients internal to BAE Systems</span>
+							<ul>
+								<li>Used SQL, PL/SQL, APEX for Oracle, and JavaScript to create data-driven webpages</li>
+								<li>Created a custom JavaScript library which allowed easy creation of custom popup dialogs far more powerful than the built-in APEX pop-ups.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="projects">
+				<p class="section_head">Personal Projects</p>
+				<div class="project">
+					<p class="project_head">This Resume (Ongoing)</p>
+					<p class="project_desc">As a way to be a little extra creative, this resume has been created with HTML and CSS, instead of the standard Word document.  The goal is to make it look and feel very similar to viewing a word doc, while simultaneously providing a current code sample and increasing the power of the tools available to create and present the resume. Fallbacks for old IE and special print styles help ensure usability consistent with Word.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Personal Webserver (Ongoing)</p>
+					<p class="project_desc">After Website Design and Implementation in college, it seemed appropriate to have a personal website.  While the site itself never really developed a purpose, it has served as a portfolio, albeit not frequently updated (<a target="_blank" href="http://www.coldcandor.com/webpages.php">http://www.coldcandor.com/webpages.php</a>), and a testbed for ideas and functional practice.  The site is now hosted on a server located in my living room, with all steps to create a web server (VirtualBox, Linux Server, Apache, Firewall and Port Forwarding, DDNS, SELinux extended permissions, custom user groups, IRC server, PHP, MySQL, Git, and so on) having been completed personally. The site has numerous subdomains, a beta version, everything important versioned in Git, and has seen numerous server migrations including Ubuntu Server, Debian, and CentOS.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Launch of inKind (2014)</p>
+					<p class="project_desc">While not a personal project specifically, this was done primarily as volunteer work.  I assisted with front end work for the launch of the website <a target="_blank" href="http://www.beinkind.com">beinkind.com</a>.  They aim to serve non-profits with a Kickstarter-like system that gets donators to contribute actual items rather than cash.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Minecraft Enchanting Simulator (2012)</p>
+					<p class="project_desc">A project to both analyze and understand the Minecraft enchanting algorithm, and to utilize JavaScript coding concepts learned at Synacor.  It makes heavy use of jQuery.  Having not had time to finish it fully (and it now being so out of date as to be useless), it lacks a pretty UI and input validation.  The simulator is hosted at <a target="_blank" href="http://www.coldcandor.com/minecraft.php">http://www.coldcandor.com/minecraft.php</a>.</p>
+				</div>
+				<div class="project">
+					<p class="project_head">Guild Website (2007)</p>
+					<p class="project_desc">This was a self-motivated project to create a highly functional website for a World of Warcraft guild.  Written in PHP, XHTML, CSS, and small amounts of JavaScript, the site caters to the many needs of a guild, including an interactive calendar, a screenshot uploader and viewer, a registration and login system, announcement system, and more.  The website is located at <a target="_blank" href="http://freedomschoice.coldcandor.com">http://freedomschoice.coldcandor.com</a>, preserved as it was in 2007, except that the database was lost and those pages now error.  The site took approximately 3 months from inception to final.</p>
+				</div>
+			</section>
+
+			<section class="skills" style="page-break-before: always;">
+				<p class="section_head">Skills</p>
+				<ul>
+					<li><span>Programming Languages (In order of skill from most to least)</span>
+						<ul>
+							<li>HTML/CSS, JavaScript, JSON, HTML5/CSS3, PHP, Regular Expressions, XML, Bash Scripting, SQL</li>
+						</ul>
+					</li>
+					<li><span>Frameworks</span>
+						<ul>
+							<li>Mustache/Ctemplate, Bootstrap, Less, Sass/SCSS, Node.js, Twig, Symfony, Pure</li>
+						</ul>
+					</li>
+					<li><span>Applications</span>
+						<ul>
+							<li>Git, jEdit editor, Grunt, Composer, vim, Apache, Toggl, Jira, Adobe Photoshop (as it pertains to cut-ups)</li>
+						</ul>
+					</li>
+					<li><span>Operating Systems</span>
+						<ul>
+							<li>Windows XP/7/8, Linux command line, Android (CyanogenMod), Ubuntu Desktop, Mac OSX</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section class="honors">
+				<p class="section_head">Honors and Activities</p>
+				<ul>
+					<li>RIT Presidential Scholarship</li>
+					<li>Member of People to People International Student Ambassador Program since 2000</li>
+					<li><em>Community Service Head</em> of the House of General Science, 2002-2004</li>
+					<li>Hobbies include CrossFit, running, hiking, puzzles, coding, games of all types, and reading/audiobooks</li>
+				</ul>
+			</section>
+
+			<section class="final">
+				<p>References, college transcript, and letter of recommendation available on request.  Please visit my LinkedIn Profile at <a target="_blank" href="https://www.linkedin.com/in/coldcandor">https://www.linkedin.com/in/coldcandor</a> for more detailed information.</p>
+			</section>
+		</div>
+	</body>
+</html>

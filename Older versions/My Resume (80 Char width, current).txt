@@ -1,0 +1,187 @@
+ERIC SHIELDS ___________________________________________________________________
+
+13 Marian Ter, Binghamton, NY 13901
+Work Phone: (602)231-1275
+Cell Phone: (607)221-5725 (Preferred method of contact)
+Email: shiermail-jobs@yahoo.com
+
+--------------------------------------------------------------------------------
+
+Job Search Details: 
+
+  Objective:          Obtain a full time job in the area of Computer Science or 
+                      Software Engineering.   Computer Engineering and 
+                      Electrical Engineering positions are also possibilities.  
+                      Topics of special interest include test/quality assurance 
+                      programming and web page design.
+  Availability:       Starting in or after October 2006.  Official graduation 
+                      will occur after 8-10 weeks of work are completed.  This 
+                      can be verified with my educational institution.
+  Citizenship:        US Citizen
+  Desired Job Titles: Content Engineer – Web, Software Engineer
+  Job Type:           Full-Time, Internship or Entry Level, No Shift Preference, 
+                      Willing to Work Weekends and/or Overtime, Willing to 
+                      Relocate to Anywhere in the US
+  Work Experience:    2 Years Software Engineering-related Experience
+                      1 Year Web Design-related Experience   Portfolio Available
+
+--------------------------------------------------------------------------------
+
+Education:  ROCHESTER INSTITUTE OF TECHNOLOGY, ROCHESTER, NY      
+            EXPECTED GRADUATION:   NOVEMBER  2006
+
+  Bachelor of Science in Computer Engineering
+
+--------------------------------------------------------------------------------
+    
+Employment History:
+
+SOFTWARE ENGINEER:  SUMMER INTERNSHIP PROGRAM
+Honeywell Aerospace                               June 2006 - Current
+                                                  Phoenix, AZ                  
+     
+*	Create an Intranet website to allow the search and retrieval of engine test 
+  data by employees
+*	Involved PHP, XHTML, Javascript, DHTML, Fusebox, and knowledge of ColdFusion 
+  and Perl
+*	Required testing in many system/browser combinations to ensure functionality 
+  in any situation
+*	Designed for expandability and maintainability - Fully W3 standards compliant
+*	Completed in 3 months, from initial concept to live release
+*	Involved finalizing a smaller site, then completely reworking it to use 
+  Fusebox framework and merge it with another site
+*	Also used Logins, sessions, cookies, and a great deal of interaction with 
+  files
+*	Continued working on the project after the internship was completed to help 
+  debug, understand, or add to it
+*	Wrote a tutorial document to help new users use the website
+
+SOFTWARE ENGINEER CO-OP
+Harris RF Communications                          September 2005 - November 2005
+                                                  Rochester, NY    
+                      
+* Issued a security clearance
+* Familiarization with manuals, concepts, functionality, and testing of 
+  Falcon II radios
+* Learned basics of Visual Basic in under 1 week
+* Modify existing Visual Basic code to improve GUI’s for multiple test scripts
+* Debugging and alteration of Visual Basic testing scripts
+* Assisted with field testing of new radio software and learned military radio 
+  communication protocols
+
+       
+SOFTWARE ENGINEER:  SUMMER INTERNSHIP PROGRAM
+Honeywell Aerospace                               June 2005 - August 2005
+                                                  Phoenix, AZ                  
+     
+* Design a program in PHP to convert very old file format to a newly developed 
+  one.  (4000 lines of code)
+* Read, understand, and modify the conversion program from the new format to the 
+  old, in Perl
+* Design programs in PHP to test the conversion from the new format to the old
+* Project of great importance; undertaken to prevent the loss of extensive 
+  amounts of test data being stored in the old format on servers which are no 
+  longer supported
+* Required extremely fast adaptation to new climate, new work environment, and 
+  new programming languages.  Learned PHP and Regular Expressions in less than 5 
+  days each
+* Required all previously attained skills in greater effect then ever before
+       
+RESEARCH TECHNICIAN
+Dr.Greg P.  Semeraro, PH.D.                       Janurary 2005 - March 2005
+                                                  Rochester, NY                  
+     
+* Design and implement ways of completing research related tasks, such as 
+  discovering and correcting the cause of a benchmark program not working with 
+  software created by Dr. Semeraro and previous students.
+* Little supervision, necessitating personal motivation and inventive ways of 
+  solving problems.
+       
+CREW CHIEF AND COMPUTER TECHNICIAN                Summer 2002 & 2003
+Shields Surveying                                 Deposit, NY
+                                                                    
+* Supervised other crewmen in completing various surveying jobs in the field, 
+  involving improvisation, leadership, problem management, prioritization, time 
+  management, and human relations skills
+* Worked with the office computers with aspects such as installing and upgrading
+  new PC software/hardware and teaching the use of the software/hardware to the 
+  employer
+
+--------------------------------------------------------------------------------
+
+Projects: 
+
+EBOOKFORMATTER (FREE-TIME PROJECT)
+* Self-motivated project to produce an extensively functional text formatter for 
+  use with eBook-style text documents and emails.  Written in PHP and HTML.  
+  Hosted by Sourceforge.net at http://ebookformat.sourceforge.net/
+
+WEBSITE DESIGN AND IMPLEMENTATION (RIT PROJECT)
+* Contained both an individual project and a group project intended to make use 
+  of the many aspects of XHTML and Javascript available, including Cascading 
+  Style Sheets, XHTML and HTML, PHP, Javascript, Forms, Form Mail, Password 
+  protected pages, and validation.  Please visit the pages below (Best Viewed in 
+  Firefox or other W3 Standards compliant browser, including any major browser 
+  except Internet Explorer)
+* http://www.rit.edu/~ers3268/409/final   -   Final individual project
+* Website currently unavailable   -   Group project 
+
+INTERFACE AND DIGITAL ELECTRONICS (RIT PROJECT)
+* Team project to design and demonstrate a heartbeat monitor using an 
+  Opto-Isolator and a Motorola 68HC12 Microcontroller - Performed all hardware 
+  design and construction and assisted with software design
+
+SOFTWARE ENGINEERING (RIT PROJECT)
+* Team project to design entire bowling management system using Java, including 
+  automatic and manual scoring, and complete graphical user interface in a 
+  real-world environment (e.g. weekly status reports, team reviews, and final 
+  project reflection)
+
+COMPUTER SCIENCE (RIT PROJECT)
+* Team project to design adaptable genetic mating algorithm using C++ and apply 
+  it to problems such as solving a maze and a number guessing game
+
+--------------------------------------------------------------------------------
+
+Relevant College Courses:
+
+Website Design and Implementation           Operating Systems Concepts I
+Computer Science I - IV                     Introduction to VLSI Design
+Software Engineering                        Design Automation of Digital Systems
+Applied Programming                         Digital System Design
+Introduction to Computer Vision             Computer Architecture
+Introduction to Digital Systems             Senior Design Projects I - II
+VHDL                                        Computer Organization 
+Interface and Digital Electronics           Data and Computer Communications
+Circuits I - II                             Digital Signal Processing 
+Electronics I - II                          Assembly Language Programming
+
+--------------------------------------------------------------------------------
+
+Computer Skills:
+
+* Windows 3.1/95/98/ME/NT/2000/XP, UNIX, LINUX, Emacs, vi, MS Word, MS Excel, 
+  MS Powerpoint, MS-DOS, ModelSim, PSpice, Eclipse, PuTTY, X-Win, JEdit, Mentor 
+  Graphics Suite. FTP SFTP SCP and SSH programs.
+* Extensive knowledge in C, PHP, Regular Expressions, XHTML and CSS
+* Workable Knowledge in XML, VHDL
+* Knowledge in Visual Basic, Perl, Java, C++
+* Very quick study of new languages and programs
+
+--------------------------------------------------------------------------------
+
+Honors and Activities:
+
+* RIT Presidential Scholarship
+* TAP award for excellence in academics
+* High School Honor Society Member
+* Member of People to People International Student Ambassador Program since 2000
+* Member of House of General Science at RIT, 2001-2004
+* Community Service Head of the House of General Science, 2002-2004
+* Volunteer and fundraiser for Multiple Sclerosis Society, 1999-2001
+* Varsity Track and Field (Indoor and Outdoor), 2003-2006
+* IEEE Society Member
+* Avid hiker, biker, and environmental advocate
+
+
+REFERENCES AND TRANSCRIPT AVAILABLE ON REQUEST
