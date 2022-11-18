@@ -13,7 +13,7 @@ body {
     line-height: 1.30;
 }
 main {
-    margin: 20px auto;
+    margin: 0 auto;
     width: 8.5in;
 }
 a {
@@ -77,11 +77,12 @@ main > header {
     column-span: all;
     font-family: sans-serif;
     object-fit: contain;
+    margin-top: 0;
 }
 section > h1 {
     font-size: 18px;
     font-weight: bold;
-    left: -5px;
+    left: 0;
     position: absolute;
     text-align: center;
     top: -25px;
@@ -134,13 +135,12 @@ section > h1 {
 .extra-info {
     display: flex;
     align-items: stretch;
-    justify-content: space-evenly;
     column-gap: 35px;
 }
 
 /* Contact */
 .contact {
-    flex-grow: 5;
+    width: 50%;
 }
 .contact table th {
     padding: 2px 10px;
@@ -149,7 +149,7 @@ section > h1 {
 
 /* Education */
 .education {
-    flex-grow: 5;
+    width: 50%;
 }
 .education .school {
     margin: 0;
@@ -199,7 +199,7 @@ section > h1 {
 @media print {
     main {
         box-decoration-break: clone;
-        padding: .3in .5in;
+        padding: .25in;
     }
     .recommendations {
         display: none;
