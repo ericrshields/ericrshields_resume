@@ -1,0 +1,215 @@
+/* Globals */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #99c0e7;
+    font-family: Cambria, sans-serif;
+    font-size: 12px;
+    line-height: 1.30;
+}
+main {
+    margin: .25in auto;
+    width: 8.5in;
+}
+a {
+    color: #00f;
+}
+blockquote {
+    background: #f2f2f2;
+    border-left: 10px solid #ccc;
+    margin-bottom: 7px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-right: 0.05em;
+    vertical-align: -0.4em;
+}
+blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 3em;
+    line-height: 0.1em;
+    margin-left: .05em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
+h1, h3 {
+    font-variant: small-caps;
+}
+p:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+ul {
+    margin-left: 30px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    text-align: right;
+}
+
+/* Section Layout */
+section,
+main > header,
+.experience article {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 1px #444;
+    display: block;
+    margin-top: 35px;
+    padding: 7px;
+    position: relative;
+}
+main > header {
+    column-span: all;
+    font-family: sans-serif;
+    object-fit: contain;
+    margin-top: 0;
+}
+section > h1 {
+    font-size: 18px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: -25px;
+    width: 100%;
+}
+
+/* Primary info */
+.primary_info {
+    text-align: center;
+}
+.primary_info h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    width: 100%;
+}
+.primary_info h3 {
+    font-size: 20px;
+}
+
+/* Search Details */
+.search_details {
+    text-align: justify;
+}
+.search_details h3 {
+    font-size: 130%;
+    margin-bottom: 5px;
+}
+
+/* Skills */
+.skills {
+}
+.skills > ul {
+    columns: 3;
+    list-style-type: none;
+    margin: 0 0 0 100px;
+}
+.skills > ul > li + li {
+    margin-top: 10px;
+}
+.skills ul ul {
+    list-style-type: "\2705"; /* Check mark */
+    font-size: 120%;
+}
+.skills ul ul li {
+    padding-left: 3px;
+}
+
+/* Grouping box for contact and education */
+.extra-info {
+    display: flex;
+    align-items: stretch;
+    column-gap: 35px;
+}
+
+/* Contact */
+.contact {
+    width: 50%;
+}
+.contact table th {
+    padding: 2px 10px;
+    text-align: right;
+}
+
+/* Education */
+.education {
+    width: 50%;
+}
+.education .school {
+    margin: 0;
+}
+.education .degree {
+    font-weight: bold;
+}
+
+/* Recommendations */
+.recommendations:before {
+    clear: both;
+    content: " ";
+    padding-top: 35px;
+}
+
+/* experience History */
+.experience {
+    background-color: transparent;
+    box-shadow: none;
+    clear: both;
+    padding: 0;
+}
+.experience article + article {
+    margin-top: 15px;
+}
+.experience header {
+    box-shadow: none;
+    margin-bottom: 7px;
+    overflow: hidden;
+    text-align: left;
+}
+.experience header p {
+    margin: 0;
+}
+.experience article > p:last-child {
+    margin-top: 5px;
+}
+.experience .company,
+.experience .location {
+    font-style: italic;
+}
+
+/* Print styles */
+@page {
+    size: letter;
+}
+@media print {
+    main {
+        box-decoration-break: clone;
+        margin: 0;
+        padding: .25in;
+        width: 100%;
+    }
+    .recommendations {
+        display: none;
+    }
+    .experience article {
+        break-inside: avoid;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
