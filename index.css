@@ -209,4 +209,7 @@ section > h1 {
     .experience article {
         break-inside: avoid;
     }
+    .no-print {
+        display: none !important;
+    }
 }
